@@ -1,0 +1,39 @@
+Q2) Write a Java program that can take a positive integer greater than 2 as input and write out the number of times one must repeatedly divide this number by 2 before 
+getting a value less than 2.
+
+Answer:
+
+import java.util.Scanner;
+public class a1q2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number more than 2: ");
+		
+		//Gathering the input of number and adding count variable 
+		int posint;
+		int count;
+		count=0;
+		posint=sc.nextInt();
+		
+		//Checking if the number is correctw
+		if (posint<2)
+		{
+			System.out.println("Input incorrect");
+			
+		}
+		else if (posint>=2)
+		{
+			//Loop for getting the answer less than 2
+			while (posint>=2)
+			{
+				posint=posint/2;
+				count=count+1;	
+			}
+			System.out.println("The count is: " + count);
+			
+		}
+
+	}
+
+}
